@@ -49,8 +49,7 @@ ListNode* insert_last(ListNode* tail, element data) {
 ListNode* delete_first(ListNode* tail) {
 	ListNode* removed;
 	if (tail == NULL)return NULL;
-	removed = tail;
-	removed = removed->link;
+	removed = tail->link;
 	tail->link = removed->link;
 	free(removed);
 	return tail;
